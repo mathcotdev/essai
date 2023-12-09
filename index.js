@@ -1,6 +1,7 @@
 const expresse = require("express")
 const ejs = require("ejs")
 const app = expresse()
+app.set("views", "./views")
 app.set("view engine", "ejs")
 app.listen(3000, function(){console.log("http://localhost:"+3000)
 console.log(process.env.NODE_ENV)})
