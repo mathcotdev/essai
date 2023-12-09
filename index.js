@@ -1,5 +1,7 @@
 const expresse = require("express")
+const env_cmd = require("env-cmd")
 const app = expresse()
 app.set("view engine", "ejs")
-app.listen(3000, function(){console.log("http://localhost:"+3000)})
+app.listen(3000, function(){console.log("http://localhost:"+3000)
+console.log(process.env.NODE_ENV)})
 app.get("/", function(req, res){res.render("accueil")})
